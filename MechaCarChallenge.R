@@ -12,3 +12,21 @@ lmodedl <- lm(mpg ~ vehicle_length +
               df)
 
 summary(lmodedl)
+
+coil_df <- read.csv('Suspension_Coil.csv',
+                    check.names = F,
+                    stringsAsFactors = F)
+
+total_summary <- coil_df %>% 
+  summarize(Mean = mean(PSI), 
+            Median = median(PSI),
+            Variance = var(PSI),
+            SD = sd(PSI))
+
+lot_summary <- coil_df %>% 
+  group_by(Manufacturing_Lot) %>% 
+  summarize(Mean = mean(PSI), 
+            Median = median(PSI),
+            Variance = var(PSI),
+            SD = sd(PSI),
+            .groups = 'keep')
