@@ -30,3 +30,12 @@ lot_summary <- coil_df %>%
             Variance = var(PSI),
             SD = sd(PSI),
             .groups = 'keep')
+
+t.test(x = coil_df$PSI, mu = 1500)
+
+t.test(PSI~1,data=coil_df, subset = Manufacturing_Lot == 'Lot1', mu = 1500)
+
+t.test(PSI~1,data=coil_df, subset = Manufacturing_Lot == 'Lot2', mu = 1500)
+
+t.test(PSI~1,data=coil_df, subset = Manufacturing_Lot == 'Lot3', mu = 1500)
+
