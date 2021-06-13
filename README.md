@@ -47,3 +47,10 @@ We fail to reject the null hypothesis since the p-value (0.61) is greater than 0
 ![Lot3_ttest](./Resources/Lot3_t.png)
 We reject the null hypothesis since the p-value (0.042) is less than 0.05. From our previous section this makes sense since Lot 3's PSI measurements have a high degree of variability and the mean of this sample is the lowest.
 
+## Study Design: MechaCar vs. Competition
+
+Our study's success metric will be the ratio of horse-power to cost, which will model the overall power of the car relative to its cost. Since we wil be comparing the mean of the MechaCar's hp/cost to the population of all cars we will use a one-sample t-test with the following hypotheses:
+1. **H<sub>0</sub>**: The mean of the sample is not greater than the population mean
+2. **H<sub>a</sub>**: The mean of the sample is greater than the population mean
+
+In order to run this test we would need to collect hp and cost data on all available makes of competitors cars as well as the MechaCar's.
